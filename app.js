@@ -5,10 +5,14 @@ Vue.createApp({
             items: [
                 "first",
                 "second",
-                "third"
+                "third",
+                "and another one"
             ],
             message: "",
-            modelinput: []
+            modelinput: [],
+            tacos: "",
+            a: 0,
+            b: 0
         }
     }
 }).mount("#app");

@@ -27,7 +27,32 @@
     <input name="b" v-model="modelinput" type="checkbox" value="b">
     <label for="c">c</label>
     <input name="c" v-model="modelinput" type="checkbox" value="c">
+
+    <span v-for="item in items">
+        <label for="{{item}}">
+            {{item}}
+            <input v-model="modelinput" type="checkbox" v-bind:value="item">
+        </label>
+    </span>
     <h3>{{modelinput}}</h3>
+
+
+    <h4>Do you like tacos?</h4>
+    <input v-model="tacos" value="yes" id="yes" type="radio">
+    <label for="yes">yes</label>
+    <input v-model="tacos" value="no" id="no" type="radio">
+    <label for="no">no</label>
+
+    <p v-if="tacos === 'yes'">Nice!!!!!</p>
+    <p v-else-if="tacos === 'no'">Monster!!!</p>
+
+    <!-- calculator exercise -->
+    <h1>My Calculator</h1>
+    <span>
+        <input v-model.number="a" type="number"> + <input v-model.number="b" type="number"> = <p>{{a + b}}</p>
+    </span>
+
+
 </div>
 
 <!-- scripts -->
