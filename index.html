@@ -52,6 +52,13 @@
         <input v-model.number="a" type="number"> + <input v-model.number="b" type="number"> = <p>{{a + b}}</p>
     </span>
 
+    <h1>Methods</h1>
+    <ul>
+        <li v-for="comment in comments" :key="comment">
+            {{comment}}
+        </li>
+    </ul>
+    <input @keyup.enter="addComment" v-model="newComment" placeholder="Add a comment">
 
 </div>
 
